@@ -7,11 +7,10 @@ body {
 	color: #555;
 }
 h1 {
-
 	font-size: 3em;
 	font-weight: 800;
 	text-align: center;
-	margin: 30px auto;
+	margin: 30px 0;
 }
 
 .img-container {
@@ -40,12 +39,8 @@ h1 {
 	cursor: pointer;
 }
 
-
 li.active-button {
 	background: lightblue;
-}
-li.inactive-button {
-	background: #555;
 }
 
 .prev, .next {
