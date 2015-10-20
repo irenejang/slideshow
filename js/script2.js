@@ -1,46 +1,68 @@
-var $photos = $('.photos');
-var $buttons = $('.buttons li');
+// this alaso works
+// for (var i = 1; i < 5; i++) {
+// 	$('.img-container li').eq(i).hide();
+// };
 
-function fadeOut() {
-	$('.active-img').fadeOut();
-}
+// $('img:not(.active-img').hide();
 
+$('.img-container img:gt(0)').hide();
 
+// function autoplay() {
+// 	setInterval(function() {
+// 		$('.img-container ul li:first-child').fadeOut().next('li img').show();
+// 	}, 3000);
+// }
 
-$('.img-container li:gt(0)').hide();
+// autoplay();
 
-$buttons.click(function() {
+$('.buttons li').click(function() {
 	$(this).addClass('active-button').siblings().removeClass('active-button');
 });
 
-$buttons.click(function() {
-	fadeOut();
-	var btnIndex = $(this).index(); 
-	$photos.eq(btnIndex).fadeIn().addClass('active-img').siblings().removeClass('active-img');
-	// $photos.eq(btnIndex).addClass('active-img').siblings().removeClass('active-img');
-});
 
-$('.prev').click(function() {
-	var imgIndex = $('.active-img').index();
-	fadeOut();
-	if (imgIndex > 0) {
-		$photos.eq(imgIndex - 1).fadeIn();
-		$photos.eq(imgIndex - 1).addClass('active-img').siblings().removeClass('active-img');
-	} else {
-		$photos.eq($('.photos').length - 1).fadeIn().addClass('active-img').siblings().removeClass('active-img');
-	}
-	var activeIndex = $('.active-img').index();
-	$buttons.eq(activeIndex).addClass('active-button').siblings().removeClass('active-button');
-});
 
-$('.next').click(function() {
-	var imgIndex = $('.active-img').index();
-	fadeOut();
-	if (imgIndex < 4) {
-		$photos.eq(imgIndex + 1).fadeIn().addClass('active-img').siblings().removeClass('active-img');
-	} else {
-		$photos.eq(0).fadeIn().addClass('active-img').siblings().removeClass('active-img');
-	}
-	var activeIndex = $('.active-img').index();
-	$buttons.eq(activeIndex).addClass('active-button').siblings().removeClass('active-button');
-});
+// makeActiveImg function:
+	// change class to active-img
+	// 
+	// remove class active-img from siblings
+
+// bind makeActiveImg to button selector
+	// run makeActiveImg
+
+// $('.buttons li').eq(i).click(function(i) {
+// 	$('li > img').eq(i).addClass('active-img').siblings().removeClass('active-img');
+// 	$('.active-img').show();
+// 	$('img:not(.active-img)').hide();
+	// $('.img'
+	// $('.active-img').show();
+// });
+
+// $('.img-container li').click(function() {
+// 	$(this).addClass('active-img').siblings().removeClass('active-img');
+// 	$('active-img').show();
+// })
+
+
+// html elements:
+	// 5 images
+	// prev button
+	// next button
+	// five circles
+
+// css elements:
+	// position elements on top of each other
+	// center it
+	// prev button: float left
+	// next button: float right
+	// five circles: center
+
+// set active class to first picture and first circle
+	// active button: blue background color
+	// active picture: show it 
+
+// javascript elements:
+	// on load: img2-5 should be hidden
+	// on circle click: 
+	// click previous: 
+		// if img2-5
+

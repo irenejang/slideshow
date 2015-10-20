@@ -48,10 +48,20 @@ li.active-button {
 	text-decoration: none;
 	display: inline-block;
 	margin-top: 35px;
+	cursor: pointer;
 }
 .prev {
 	float: left;
 }
 .next {
 	float:right;
+}
+
+.stop {
+	cursor: pointer;
+	padding: 1em;
+	background: #cdcc64;
+	display: inline-block;
+	color: white;
+	border-radius: 10px;
 }
