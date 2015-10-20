@@ -6,10 +6,6 @@ var autoplay = setInterval(function() {
 		nextImg();
 	}, 1750);
 
-function stopAutoplay() {
-	clearInterval(autoplay);
-}
-
 function nextImg() {
 	var imgIndex = $('.active-img').index();
 	$('.active-img').fadeOut();
