@@ -58,7 +58,7 @@ $('.stop').click(function() {
 		$('.stop p').text("Start Autoplay");
 	}
 	else {
-		setInterval(function() {
+		autoplay = setInterval(function() {
 			nextImg();
 		}, 1750);
 		play = true;
