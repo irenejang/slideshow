@@ -26,9 +26,6 @@ $('.img-container li:gt(0)').hide();
 
 $buttons.click(function() {
 	$(this).addClass('active-button').siblings().removeClass('active-button');
-});
-
-$buttons.click(function() {
 	$('.active-img').fadeOut();
 	var btnIndex = $(this).index(); 
 	$photos.eq(btnIndex).fadeIn().addClass('active-img').siblings().removeClass('active-img');
