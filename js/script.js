@@ -4,7 +4,7 @@ var $buttons = $('.buttons li');
 function nextImg() {
 	var imgIndex = $('.active-img').index();
 	$('.active-img').fadeOut();
-	if (imgIndex < 4) {
+	if (imgIndex < $photos.length - 1) {
 		$photos.eq(imgIndex + 1).fadeIn().addClass('active-img').siblings().removeClass('active-img');
 	} else {
 		$photos.eq(0).fadeIn().addClass('active-img').siblings().removeClass('active-img');
@@ -13,21 +13,13 @@ function nextImg() {
 	$buttons.eq(activeIndex).addClass('active-button').siblings().removeClass('active-button');
 }
 
-function autoplay() {
-	setInterval(function() {
-		nextImg();
-	}, 3000);
-}
-
 function stopAutoplay() {
 	clearInterval(autoplay);
 }
 
-autoplay();
-
-$('.stop').click(function() {
-	stopAutoplay();
-})
+var autoplay = setInterval(function() {
+		nextImg();
+	}, 2000);
 
 $('.img-container li:gt(0)').hide();
 
@@ -57,6 +49,11 @@ $('.prev').click(function() {
 $('.next').click(function() {
 	nextImg();
 });
+
+$('.stop').click(function() {
+	clearInterval(autoplay);
+})
+
 
 
 
