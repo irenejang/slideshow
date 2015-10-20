@@ -1,5 +1,6 @@
 var $photos = $('.photos');
 var $buttons = $('.buttons li');
+var play = true;
 
 function nextImg() {
 	var imgIndex = $('.active-img').index();
@@ -51,8 +52,19 @@ $('.next').click(function() {
 });
 
 $('.stop').click(function() {
-	clearInterval(autoplay);
-})
+	if (play) {
+		clearInterval(autoplay);
+		play = false;
+		$('.stop p').text("Start Autoplay");
+	}
+	else {
+		setInterval(function() {
+			nextImg();
+		}, 1750);
+		play = true;
+		$('.stop p').text("Stop Autoplay");
+	}
+});
 
 
 
