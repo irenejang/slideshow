@@ -19,7 +19,7 @@ function stopAutoplay() {
 
 var autoplay = setInterval(function() {
 		nextImg();
-	}, 2000);
+	}, 1750);
 
 $('.img-container li:gt(0)').hide();
 
